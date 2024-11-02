@@ -6,7 +6,7 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     const lib = b.addStaticLibrary(.{
-        .name = "ring-buffer",
+        .name = "ringbuffer",
 
         .root_source_file = b.path("src/RingBuffer.zig"),
         .target = target,
@@ -20,7 +20,7 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
-    const M = b.addModule("ring-buffer", .{
+    const M = b.addModule("ringbuffer", .{
         .root_source_file = b.path("src/RingBuffer.zig"),
         .target = target,
         .optimize = optimize,

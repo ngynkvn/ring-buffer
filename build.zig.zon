@@ -1,5 +1,5 @@
 .{
-    .name = "ring-buffer",
+    .name = "ringbuffer",
 
     .version = "0.0.1",
 

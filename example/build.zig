@@ -15,7 +15,7 @@ pub fn build(b: *std.Build) void {
 
     b.installArtifact(lib);
 
-    const dep_ringbuffer = b.dependency("ring-buffer", .{});
+    const dep_ringbuffer = b.dependency("ringbuffer", .{});
 
     const exe = b.addExecutable(.{
         .name = "example",
@@ -23,7 +23,7 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
-    exe.root_module.addImport("ring-buffer", dep_ringbuffer.module("ring-buffer"));
+    exe.root_module.addImport("ringbuffer", dep_ringbuffer.module("ringbuffer"));
 
     b.installArtifact(exe);
 
